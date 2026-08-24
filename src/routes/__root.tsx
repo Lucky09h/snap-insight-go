@@ -72,6 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "monetag", content: "11f78ae048ac2a7907115b81fd4bb479" },
       { title: "Image Aura Scanner — AI image identification" },
       { name: "description", content: "Upload any image and get instant AI-powered information about objects, plants, and food." },
       { name: "application-name", content: "AuraScan" },
