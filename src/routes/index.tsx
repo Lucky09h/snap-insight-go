@@ -5,6 +5,51 @@ import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner" },
+      {
+        name: "description",
+        content:
+          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+      },
+      {
+        property: "og:title",
+        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+      },
+      {
+        property: "og:description",
+        content:
+          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+      },
+      { property: "og:url", content: "https://snap-insight-go.lovable.app/" },
+      { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9377cf31-c602-4be3-a674-81143d142fe1/id-preview-a45ace0e--7171be51-f56b-4c7c-b6ee-2ba5b2228b32.lovable.app-1778180244331.png",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@Lovable" },
+      {
+        name: "twitter:title",
+        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9377cf31-c602-4be3-a674-81143d142fe1/id-preview-a45ace0e--7171be51-f56b-4c7c-b6ee-2ba5b2228b32.lovable.app-1778180244331.png",
+      },
+    ],
+    links: [
+      { rel: "canonical", href: "https://snap-insight-go.lovable.app/" },
+    ],
+  }),
 });
 
 type Result = {
