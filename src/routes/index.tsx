@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState } from "react";
-import { Camera, Upload, Sparkles, RotateCcw, Loader2 } from "lucide-react";
+import { useMemo, useRef, useState } from "react";
+import { Camera, Upload, Sparkles, RotateCcw, Loader2, Copy, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/")({
@@ -209,6 +209,60 @@ function LoadingScreen({ preview }: { preview: string | null }) {
 }
 
 function ResultScreen({ preview, result }: { preview: string | null; result: Result }) {
+  const [notice, setNotice] = useState<string | null>(null);
+
+  const resultText = useMemo(() => {
+    const lines: string[] = [];
+    lines.push(`Name: ${result.name}`);
+    lines.push("");
+    lines.push("Description:");
+    lines.push(result.description);
+    if (result.uses?.length) {
+      lines.push("");
+      lines.push("Benefits & Uses:");
+      result.uses.forEach((use) => lines.push(`• ${use}`));
+    }
+    lines.push("");
+    lines.push("Analyzed with SnapInfo AI");
+    return lines.join("\n");
+  }, [result]);
+
+  const showNotice = (message: string) => {
+    setNotice(message);
+    setTimeout(() => setNotice(null), 2000);
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(resultText);
+      showNotice("Result copied!");
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `SnapInfo: ${result.name}`,
+          text: resultText,
+        });
+      } catch (e) {
+        if (e instanceof Error && e.name !== "AbortError") {
+          console.error(e);
+        }
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(resultText);
+        showNotice("Result copied — you can share it anywhere.");
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col gap-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
       {preview && (
@@ -251,6 +305,32 @@ function ResultScreen({ preview, result }: { preview: string | null; result: Res
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={handleCopy}
+            className="py-3.5 rounded-2xl text-primary-foreground font-semibold inline-flex items-center justify-center gap-2 hover:opacity-95 transition-opacity"
+            style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
+          >
+            <Copy className="w-4 h-4" />
+            Copy Result
+          </button>
+          <button
+            onClick={handleShare}
+            className="py-3.5 rounded-2xl text-primary-foreground font-semibold inline-flex items-center justify-center gap-2 hover:opacity-95 transition-opacity"
+            style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
+          >
+            <Share2 className="w-4 h-4" />
+            Share Result
+          </button>
+        </div>
+        {notice && (
+          <p className="text-center text-sm font-medium text-primary animate-in fade-in">
+            {notice}
+          </p>
+        )}
       </div>
     </div>
   );
