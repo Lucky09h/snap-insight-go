@@ -1,7 +1,7 @@
 {
-  "name": "Image Aura Scanner",
-  "short_name": "AuraScan",
-  "description": "Upload any image and get instant AI-powered information about objects, plants, and food.",
+  "name": "SnapInfo AI",
+  "short_name": "SnapInfo",
+  "description": "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
