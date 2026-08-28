@@ -15,6 +15,10 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          { path: "/blog/what-can-ai-image-analysis-tell-you-about-a-photo", changefreq: "monthly", priority: "0.7" },
+          { path: "/blog/how-to-analyze-an-image-with-ai", changefreq: "monthly", priority: "0.7" },
+          { path: "/blog/what-is-an-ai-image-analyzer", changefreq: "monthly", priority: "0.7" },
         ];
 
         const urls = entries.map((e) =>
