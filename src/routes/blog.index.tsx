@@ -19,7 +19,7 @@ export const Route = createFileRoute("/blog/")({
         content:
           "Practical guides about AI image analysis, from object recognition to everyday use cases.",
       },
-      { property: "og:url", content: "https://snap-insight-go.lovable.app/blog/" },
+      { property: "og:url", content: "https://snap-insight-go.lovable.app/blog" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "SnapInfo AI Blog – AI Image Analysis Tips & Guides" },
