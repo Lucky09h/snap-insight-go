@@ -29,7 +29,7 @@ export const Route = createFileRoute("/blog/")({
           "Practical guides about AI image analysis, from object recognition to everyday use cases.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://snap-insight-go.lovable.app/blog/" }],
+    links: [{ rel: "canonical", href: "https://snap-insight-go.lovable.app/blog" }],
   }),
 });
 
