@@ -21,6 +21,11 @@ export const Route = createFileRoute("/blog/")({
       },
       { property: "og:url", content: "https://snap-insight-go.lovable.app/blog" },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9377cf31-c602-4be3-a674-81143d142fe1/id-preview-a45ace0e--7171be51-f56b-4c7c-b6ee-2ba5b2228b32.lovable.app-1778180244331.png",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "SnapInfo AI Blog – AI Image Analysis Tips & Guides" },
       {
