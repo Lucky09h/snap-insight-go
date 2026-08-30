@@ -73,6 +73,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "monetag", content: "11f78ae048ac2a7907115b81fd4bb479" },
+      { name: "google-site-verification", content: "ls08t_ZzVx6a7EzsHtE3pO6z9EQDw0aHS1OrTXaJv5A" },
       { name: "application-name", content: "SnapInfo AI" },
       { name: "apple-mobile-web-app-title", content: "SnapInfo AI" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
