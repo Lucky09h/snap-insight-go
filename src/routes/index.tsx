@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { Camera, Upload, Sparkles, RotateCcw, Loader2, Copy, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { FAQSection } from "@/components/blog/faq-section";
 
 export const Route = createFileRoute("/")({
   component: Index,
