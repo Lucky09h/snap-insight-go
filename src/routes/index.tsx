@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useRef, useState } from "react";
 import { Camera, Upload, Sparkles, RotateCcw, Loader2, Copy, Share2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { FAQSection } from "@/components/blog/faq-section";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -180,6 +181,89 @@ function Index() {
           onChange={(e) => e.target.files?.[0] && handleFile(e.target.files[0])}
         />
       </section>
+
+      <div className="w-full max-w-md mt-12 space-y-10">
+        <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-3 text-foreground">Free AI Image Analyzer</h2>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            SnapInfo is a free AI image analyzer that helps you understand any photo in seconds. Use your device camera to take a picture, or upload an image from your gallery, and let our AI photo analyzer identify objects, describe subjects, and deliver useful details you can read, copy, or share instantly.
+          </p>
+          <p className="text-foreground/80 leading-relaxed">
+            Whether you want to analyze an image with AI, identify objects from images, or simply learn more about what you see, SnapInfo makes image analysis AI fast, easy, and accessible.
+          </p>
+        </section>
+
+        <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-5 text-foreground">How It Works</h2>
+          <ol className="space-y-4">
+            <li className="flex items-start gap-3">
+              <span
+                className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold text-primary-foreground"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                1
+              </span>
+              <span className="text-foreground/80 leading-relaxed pt-0.5">
+                Take a photo with your camera or upload an image from your device.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold text-primary-foreground"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                2
+              </span>
+              <span className="text-foreground/80 leading-relaxed pt-0.5">
+                Let SnapInfo AI analyze it and generate a clear description.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span
+                className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold text-primary-foreground"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                3
+              </span>
+              <span className="text-foreground/80 leading-relaxed pt-0.5">
+                Read the result, then copy or share it anywhere.
+              </span>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <div className="w-full max-w-md">
+        <FAQSection
+          items={[
+            {
+              question: "What is an AI image analyzer?",
+              answer:
+                "An AI image analyzer is a tool that uses artificial intelligence to examine a photo and describe what it shows. SnapInfo's AI image analyzer identifies objects, explains subjects, and provides useful details in plain language.",
+            },
+            {
+              question: "Can SnapInfo analyze any image?",
+              answer:
+                "SnapInfo works best with clear photos of objects, plants, animals, products, food, and everyday scenes. Very blurry, dark, or abstract images may return less accurate results.",
+            },
+            {
+              question: "Can I upload a photo from my device?",
+              answer:
+                "Yes. Tap the Upload image button and choose any photo from your gallery or file picker. SnapInfo will analyze it immediately.",
+            },
+            {
+              question: "Is SnapInfo free to use?",
+              answer:
+                "Yes, SnapInfo is a free AI image analyzer. You can upload or capture images and get AI-powered descriptions at no cost.",
+            },
+            {
+              question: "Can I take a photo directly with my camera?",
+              answer:
+                "Yes. Tap Take a photo to open your device camera, snap a picture, and SnapInfo will analyze it right away.",
+            },
+          ]}
+        />
+      </div>
 
       <footer className="mt-10 text-xs text-muted-foreground">
         Powered by AI · Snap, learn, repeat
