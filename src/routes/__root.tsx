@@ -87,6 +87,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "text/javascript",
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-E77FW5J8HR",
+      },
+      {
+        type: "text/javascript",
+        children: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E77FW5J8HR');",
+      },
+      {
+        type: "text/javascript",
         children: "(function(s){s.dataset.zone='11645656',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))",
       },
     ],
