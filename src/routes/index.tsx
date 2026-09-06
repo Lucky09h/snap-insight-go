@@ -8,20 +8,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner" },
+      { title: "AI Image Analyzer – Analyze Images With AI | SnapInfo" },
       {
         name: "description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       {
         property: "og:title",
-        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
       },
       {
         property: "og:description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       { property: "og:url", content: "https://snap-insight-go.lovable.app/" },
       { property: "og:type", content: "website" },
@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:site", content: "@Lovable" },
       {
         name: "twitter:title",
-        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
       },
       {
         name: "twitter:description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       {
         name: "twitter:image",
