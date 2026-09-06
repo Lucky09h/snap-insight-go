@@ -8,20 +8,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner" },
+      { title: "AI Image Analyzer – Analyze Images With AI | SnapInfo" },
       {
         name: "description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       {
         property: "og:title",
-        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
       },
       {
         property: "og:description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       { property: "og:url", content: "https://snap-insight-go.lovable.app/" },
       { property: "og:type", content: "website" },
@@ -34,12 +34,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:site", content: "@Lovable" },
       {
         name: "twitter:title",
-        content: "SnapInfo AI – Free AI Image Analyzer & Photo Scanner",
+        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
       },
       {
         name: "twitter:description",
         content:
-          "SnapInfo AI is a free AI image analyzer that lets you upload or capture an image and get useful information, descriptions, objects, details and insights in seconds.",
+          "Use SnapInfo as a free AI image analyzer to analyze photos, identify objects, and understand images with AI. Upload an image or take a photo and get an instant AI analysis.",
       },
       {
         name: "twitter:image",
@@ -140,7 +140,7 @@ function Index() {
         )}
       </header>
 
-      <section className="w-full max-w-md flex-1 flex flex-col">
+      <section id="analyzer" className="w-full max-w-md flex-1 flex flex-col">
         {status === "idle" && (
           <IdleScreen
             onPick={() => fileRef.current?.click()}
@@ -184,17 +184,80 @@ function Index() {
 
       <div className="w-full max-w-md mt-12 space-y-10">
         <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
-          <h2 className="text-2xl font-bold mb-3 text-foreground">Free AI Image Analyzer</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground">AI Image Analyzer – Analyze Images With AI</h2>
           <p className="text-foreground/80 leading-relaxed mb-4">
-            SnapInfo is a free AI image analyzer that helps you understand any photo in seconds. Use your device camera to take a picture, or upload an image from your gallery, and let our AI photo analyzer identify objects, describe subjects, and deliver useful details you can read, copy, or share instantly.
+            AI image analysis has become a practical way to understand photos without manual searching. An AI image analyzer looks at a picture, recognizes patterns, and turns them into a readable description. With SnapInfo, you can use this technology directly from your phone or computer: take a photo with your camera, upload an image from your gallery, and receive an instant breakdown of what the picture shows.
+          </p>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            At its core, AI image analysis is trained on large collections of labeled photos. A neural network learns relationships between shapes, colors, textures, and the words people use to describe them. When you analyze an image with AI, the model compares the patterns in your photo to what it has learned and predicts the most likely labels. The result is a plain-language summary that usually includes a name, a short description, and useful context.
+          </p>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            What can you learn from an AI picture analysis? In many cases, the tool can name the main subject, describe visible details, suggest possible uses, and flag related concepts. For example, a photo of a houseplant may return the species name, care hints, and a note that it prefers indirect light. A picture of a packaged snack might identify the product, list visible ingredients, and suggest common occasions when people eat it. Results vary depending on image quality, lighting, and how common the subject is in the model's training data.
+          </p>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            SnapInfo is designed to make this process fast and accessible. You do not need to install an app or create an account. Open the website, choose Take a photo to capture something in front of you, or tap Upload image to select a file from your device. The AI photo analyzer processes the image and returns a structured result you can read, copy, or share.
+          </p>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            People use AI image analyzers for many everyday tasks. Shoppers snap products in stores to compare prices online. Travelers photograph landmarks or street signs to learn names and translations. Students and hobbyists use image analysis AI to identify plants, animals, art, and historical objects. Homeowners photograph tools, parts, or appliances when they need replacements. The technology is also helpful for accessibility, providing descriptions of images for people with visual impairments.
+          </p>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            Unlike a reverse image search, which finds visually similar pictures already on the web, an AI image analyzer understands the content of your specific photo and creates a fresh description. That means you can ask, in effect, “What is this?” and get an answer even if your exact image has never been uploaded before. This makes AI photo analysis especially useful for one-of-a-kind moments: a bird in your garden, a dish at a restaurant, or a gadget you have never seen.
           </p>
           <p className="text-foreground/80 leading-relaxed">
-            Whether you want to analyze an image with AI, identify objects from images, or simply learn more about what you see, SnapInfo makes image analysis AI fast, easy, and accessible.
+            Because the output is generated by AI, it is not guaranteed to be perfect every time. Unusual angles, heavy blur, low light, or rarely photographed subjects can reduce accuracy. We recommend using clear, well-lit photos for the best experience. Even when the result is approximate, it often gives you enough information to decide your next step—whether that is looking up a product, learning about a plant, or simply satisfying your curiosity.
           </p>
         </section>
 
         <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
-          <h2 className="text-2xl font-bold mb-5 text-foreground">How It Works</h2>
+          <h2 className="text-2xl font-bold mb-5 text-foreground">What Can AI Image Analysis Detect?</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Objects</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                From electronics and furniture to vehicles and clothing, AI object recognition can name the item and note key features.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Plants</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                A leaf, flower, or whole plant can often be matched to a species, with care tips or habitat notes.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Animals</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Pets, wildlife, and insects can be identified by shape, markings, and posture.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Food</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Dishes, ingredients, and packaged goods may be recognized, with serving ideas or nutritional context when visible.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Everyday items</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Tools, appliances, toys, and household objects are common subjects that image analyzer AI handles well.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Visible text and details</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Signs, labels, menus, and documents can be read when the text is clear, giving you translations or summaries.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-1">Places and scenes</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Landmarks, interiors, landscapes, and city streets can be described, helping you remember or research locations.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-5 text-foreground">How to Analyze a Picture With AI</h2>
           <ol className="space-y-4">
             <li className="flex items-start gap-3">
               <span
@@ -215,7 +278,7 @@ function Index() {
                 2
               </span>
               <span className="text-foreground/80 leading-relaxed pt-0.5">
-                Let SnapInfo AI analyze it and generate a clear description.
+                Let SnapInfo analyze the image and generate a clear description.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -231,9 +294,22 @@ function Index() {
             </li>
           </ol>
         </section>
-      </div>
 
-      <div className="w-full max-w-md">
+        <section className="rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
+          <h2 className="text-2xl font-bold mb-3 text-foreground">Try SnapInfo AI Image Analyzer Free</h2>
+          <p className="text-foreground/80 leading-relaxed mb-5">
+            Ready to analyze a picture with AI? Use SnapInfo as a free AI image analyzer and get useful insights in seconds.
+          </p>
+          <a
+            href="#analyzer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-primary-foreground hover:opacity-95 transition-opacity"
+            style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}
+          >
+            <Sparkles className="w-5 h-5" />
+            Analyze an image now
+          </a>
+        </section>
+
         <FAQSection
           items={[
             {
@@ -242,24 +318,24 @@ function Index() {
                 "An AI image analyzer is a tool that uses artificial intelligence to examine a photo and describe what it shows. SnapInfo's AI image analyzer identifies objects, explains subjects, and provides useful details in plain language.",
             },
             {
-              question: "Can SnapInfo analyze any image?",
+              question: "How can I analyze a picture with AI?",
               answer:
-                "SnapInfo works best with clear photos of objects, plants, animals, products, food, and everyday scenes. Very blurry, dark, or abstract images may return less accurate results.",
+                "Open SnapInfo, tap Take a photo to use your camera or Upload image to choose a file. The AI photo analyzer processes the picture and returns a readable result you can copy or share.",
             },
             {
-              question: "Can I upload a photo from my device?",
+              question: "Can I upload a photo to SnapInfo?",
               answer:
                 "Yes. Tap the Upload image button and choose any photo from your gallery or file picker. SnapInfo will analyze it immediately.",
             },
             {
-              question: "Is SnapInfo free to use?",
+              question: "Can SnapInfo identify objects in images?",
               answer:
-                "Yes, SnapInfo is a free AI image analyzer. You can upload or capture images and get AI-powered descriptions at no cost.",
+                "Yes. SnapInfo can recognize many objects, plants, animals, food items, everyday products, visible text, and places, then describe them in a clear summary.",
             },
             {
-              question: "Can I take a photo directly with my camera?",
+              question: "Is SnapInfo free?",
               answer:
-                "Yes. Tap Take a photo to open your device camera, snap a picture, and SnapInfo will analyze it right away.",
+                "Yes, SnapInfo is a free AI image analyzer. You can upload or capture images and get AI-powered descriptions at no cost.",
             },
           ]}
         />
