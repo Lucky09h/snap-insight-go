@@ -140,7 +140,7 @@ function Index() {
         )}
       </header>
 
-      <section className="w-full max-w-md flex-1 flex flex-col">
+      <section id="analyzer" className="w-full max-w-md flex-1 flex flex-col">
         {status === "idle" && (
           <IdleScreen
             onPick={() => fileRef.current?.click()}
