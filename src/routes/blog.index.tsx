@@ -45,6 +45,12 @@ export const Route = createFileRoute("/blog/")({
 
 const posts = [
   {
+    slug: "/blog/how-to-identify-an-object-from-a-picture-using-ai",
+    title: "How to Identify an Object From a Picture Using AI",
+    summary:
+      "A practical guide to using AI image analysis to recognize objects, plants, animals, and everyday items from a photo.",
+  },
+  {
     slug: "/blog/what-can-ai-image-analysis-tell-you-about-a-photo",
     title: "What Can AI Image Analysis Tell You About a Photo?",
     summary:
