@@ -15,6 +15,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogWhatIsAnAiImageAnalyzerRouteImport } from './routes/blog.what-is-an-ai-image-analyzer'
 import { Route as BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRouteImport } from './routes/blog.what-can-ai-image-analysis-tell-you-about-a-photo'
+import { Route as BlogHowToIdentifyAnObjectFromAPictureUsingAiRouteImport } from './routes/blog.how-to-identify-an-object-from-a-picture-using-ai'
 import { Route as BlogHowToAnalyzeAnImageWithAiRouteImport } from './routes/blog.how-to-analyze-an-image-with-ai'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -49,6 +50,12 @@ const BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute =
     path: '/what-can-ai-image-analysis-tell-you-about-a-photo',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute =
+  BlogHowToIdentifyAnObjectFromAPictureUsingAiRouteImport.update({
+    id: '/how-to-identify-an-object-from-a-picture-using-ai',
+    path: '/how-to-identify-an-object-from-a-picture-using-ai',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogHowToAnalyzeAnImageWithAiRoute =
   BlogHowToAnalyzeAnImageWithAiRouteImport.update({
     id: '/how-to-analyze-an-image-with-ai',
@@ -61,6 +68,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/how-to-analyze-an-image-with-ai': typeof BlogHowToAnalyzeAnImageWithAiRoute
+  '/blog/how-to-identify-an-object-from-a-picture-using-ai': typeof BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute
   '/blog/what-can-ai-image-analysis-tell-you-about-a-photo': typeof BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute
   '/blog/what-is-an-ai-image-analyzer': typeof BlogWhatIsAnAiImageAnalyzerRoute
   '/blog/': typeof BlogIndexRoute
@@ -69,6 +77,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/how-to-analyze-an-image-with-ai': typeof BlogHowToAnalyzeAnImageWithAiRoute
+  '/blog/how-to-identify-an-object-from-a-picture-using-ai': typeof BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute
   '/blog/what-can-ai-image-analysis-tell-you-about-a-photo': typeof BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute
   '/blog/what-is-an-ai-image-analyzer': typeof BlogWhatIsAnAiImageAnalyzerRoute
   '/blog': typeof BlogIndexRoute
@@ -79,6 +88,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/how-to-analyze-an-image-with-ai': typeof BlogHowToAnalyzeAnImageWithAiRoute
+  '/blog/how-to-identify-an-object-from-a-picture-using-ai': typeof BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute
   '/blog/what-can-ai-image-analysis-tell-you-about-a-photo': typeof BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute
   '/blog/what-is-an-ai-image-analyzer': typeof BlogWhatIsAnAiImageAnalyzerRoute
   '/blog/': typeof BlogIndexRoute
@@ -90,6 +100,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/sitemap.xml'
     | '/blog/how-to-analyze-an-image-with-ai'
+    | '/blog/how-to-identify-an-object-from-a-picture-using-ai'
     | '/blog/what-can-ai-image-analysis-tell-you-about-a-photo'
     | '/blog/what-is-an-ai-image-analyzer'
     | '/blog/'
@@ -98,6 +109,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sitemap.xml'
     | '/blog/how-to-analyze-an-image-with-ai'
+    | '/blog/how-to-identify-an-object-from-a-picture-using-ai'
     | '/blog/what-can-ai-image-analysis-tell-you-about-a-photo'
     | '/blog/what-is-an-ai-image-analyzer'
     | '/blog'
@@ -107,6 +119,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/sitemap.xml'
     | '/blog/how-to-analyze-an-image-with-ai'
+    | '/blog/how-to-identify-an-object-from-a-picture-using-ai'
     | '/blog/what-can-ai-image-analysis-tell-you-about-a-photo'
     | '/blog/what-is-an-ai-image-analyzer'
     | '/blog/'
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/how-to-identify-an-object-from-a-picture-using-ai': {
+      id: '/blog/how-to-identify-an-object-from-a-picture-using-ai'
+      path: '/how-to-identify-an-object-from-a-picture-using-ai'
+      fullPath: '/blog/how-to-identify-an-object-from-a-picture-using-ai'
+      preLoaderRoute: typeof BlogHowToIdentifyAnObjectFromAPictureUsingAiRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/how-to-analyze-an-image-with-ai': {
       id: '/blog/how-to-analyze-an-image-with-ai'
       path: '/how-to-analyze-an-image-with-ai'
@@ -174,6 +194,7 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogHowToAnalyzeAnImageWithAiRoute: typeof BlogHowToAnalyzeAnImageWithAiRoute
+  BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute: typeof BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute
   BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute: typeof BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute
   BlogWhatIsAnAiImageAnalyzerRoute: typeof BlogWhatIsAnAiImageAnalyzerRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -181,6 +202,8 @@ interface BlogRouteChildren {
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogHowToAnalyzeAnImageWithAiRoute: BlogHowToAnalyzeAnImageWithAiRoute,
+  BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute:
+    BlogHowToIdentifyAnObjectFromAPictureUsingAiRoute,
   BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute:
     BlogWhatCanAiImageAnalysisTellYouAboutAPhotoRoute,
   BlogWhatIsAnAiImageAnalyzerRoute: BlogWhatIsAnAiImageAnalyzerRoute,
