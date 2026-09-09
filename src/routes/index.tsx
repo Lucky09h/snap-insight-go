@@ -342,6 +342,10 @@ function Index() {
       </div>
 
       <footer className="mt-10 text-xs text-muted-foreground">
+        <a href="/blog" className="text-primary hover:underline font-medium">
+          SnapInfo AI Blog
+        </a>
+        <span className="mx-2">·</span>
         Powered by AI · Snap, learn, repeat
       </footer>
     </main>
