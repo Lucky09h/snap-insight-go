@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { TrySnapInfoButton } from "@/components/blog/try-snapinfo";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
+import { ArticleBreadcrumb, createBreadcrumbSchema } from "@/components/blog/article-navigation";
 
 const title = "How to Identify an Object From a Picture Using AI";
 const description =
@@ -46,6 +47,7 @@ const articleSchema = {
   datePublished: "2026-09-08",
   dateModified: "2026-09-08",
 };
+const breadcrumbSchema = createBreadcrumbSchema(title, url);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -84,6 +86,7 @@ export const Route = createFileRoute("/blog/how-to-identify-an-object-from-a-pic
     links: [{ rel: "canonical", href: url }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(articleSchema) },
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
       { type: "application/ld+json", children: JSON.stringify(faqSchema) },
     ],
   }),
@@ -92,6 +95,7 @@ export const Route = createFileRoute("/blog/how-to-identify-an-object-from-a-pic
 function ArticlePage() {
   return (
     <article className="max-w-3xl mx-auto px-5 py-10">
+      <ArticleBreadcrumb title={title} />
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
           {title}
