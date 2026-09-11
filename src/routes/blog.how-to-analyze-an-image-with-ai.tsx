@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TrySnapInfoButton } from "@/components/blog/try-snapinfo";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
+import {
+  ArticleBreadcrumb,
+  RelatedArticles,
+  createBreadcrumbSchema,
+} from "@/components/blog/article-navigation";
 
 const title = "How to Analyze an Image With AI";
 const description =
@@ -41,6 +46,7 @@ const articleSchema = {
   datePublished: "2026-08-28",
   dateModified: "2026-08-28",
 };
+const breadcrumbSchema = createBreadcrumbSchema(title, url);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -79,6 +85,7 @@ export const Route = createFileRoute("/blog/how-to-analyze-an-image-with-ai")({
     links: [{ rel: "canonical", href: url }],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(articleSchema) },
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
       { type: "application/ld+json", children: JSON.stringify(faqSchema) },
     ],
   }),
@@ -87,6 +94,7 @@ export const Route = createFileRoute("/blog/how-to-analyze-an-image-with-ai")({
 function ArticlePage() {
   return (
     <article className="max-w-3xl mx-auto px-5 py-10">
+      <ArticleBreadcrumb title={title} />
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
           {title}: A Simple Step-by-Step Guide
@@ -167,6 +175,12 @@ function ArticlePage() {
       </section>
 
       <FAQSection items={faq} />
+      <RelatedArticles
+        articles={[
+          { to: "/blog/how-to-identify-an-object-from-a-picture-using-ai", title: "How to Identify an Object From a Picture Using AI" },
+          { to: "/blog/what-can-ai-image-analysis-tell-you-about-a-photo", title: "What Can AI Image Analysis Tell You About a Photo?" },
+        ]}
+      />
     </article>
   );
 }
