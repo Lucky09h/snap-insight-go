@@ -110,13 +110,19 @@ function ArticlePage() {
         </p>
       </header>
 
+      <ArticleTopCTA />
+
       <section className="prose-content">
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">How does it work?</h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
           The process starts with a neural network, a type of computer model trained on millions of
-          labeled images. When you upload a photo, the model breaks it into patterns — edges,
-          colors, textures, and shapes — and compares those patterns to what it has seen before. It
-          then predicts the most likely labels and generates a description in plain language.
+          labeled images. When you upload a photo to a{" "}
+          <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
+            free AI image analyzer
+          </a>{" "}
+          like SnapInfo AI, the model breaks it into patterns — edges, colors, textures, and shapes —
+          and compares those patterns to what it has seen before. It then predicts the most likely
+          labels and generates a description in plain language.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">What can it identify?</h2>
@@ -171,14 +177,7 @@ function ArticlePage() {
         </p>
       </section>
 
-      <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
-        <h2 className="text-xl font-semibold text-foreground mb-3">Try an AI image analyzer for free</h2>
-        <p className="text-foreground/80 leading-relaxed mb-5">
-          SnapInfo AI is a free, mobile-friendly image analyzer. Upload or snap a photo and see what
-          the AI finds.
-        </p>
-        <TrySnapInfoButton />
-      </section>
+      <ArticleBottomCTA />
 
       <FAQSection items={faq} />
       <RelatedArticles
