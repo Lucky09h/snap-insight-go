@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { TrySnapInfoButton } from "@/components/blog/try-snapinfo";
+import { ArticleTopCTA, ArticleBottomCTA } from "@/components/blog/article-cta";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
 import { ArticleBreadcrumb, createBreadcrumbSchema } from "@/components/blog/article-navigation";
 
