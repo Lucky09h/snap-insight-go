@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { TrySnapInfoButton } from "@/components/blog/try-snapinfo";
+import { ArticleTopCTA, ArticleBottomCTA } from "@/components/blog/article-cta";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
 import {
   ArticleBreadcrumb,
@@ -111,6 +111,8 @@ function ArticlePage() {
         </p>
       </header>
 
+      <ArticleTopCTA />
+
       <section className="prose-content">
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">The main subject</h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
@@ -134,8 +136,12 @@ function ArticlePage() {
         <p className="text-foreground/85 leading-relaxed mb-4">
           Optical character recognition, or OCR, lets AI pull words out of a picture. That means a
           photo of a restaurant menu, a street sign, a product label, or a receipt can be converted
-          into editable text. If you are traveling, you can snap a sign in another language and get
-          the text extracted for translation.
+          into editable text. If you are traveling, you can use a{" "}
+          <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
+            free AI image analyzer
+          </a>{" "}
+          like SnapInfo AI to snap a sign in another language and get the text extracted for
+          translation.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
@@ -168,13 +174,7 @@ function ArticlePage() {
         </p>
       </section>
 
-      <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
-        <h2 className="text-xl font-semibold text-foreground mb-3">See AI image analysis in action</h2>
-        <p className="text-foreground/80 leading-relaxed mb-5">
-          Upload or snap any photo with SnapInfo AI and get instant information about what is in it.
-        </p>
-        <TrySnapInfoButton />
-      </section>
+      <ArticleBottomCTA />
 
       <FAQSection items={faq} />
       <RelatedArticles

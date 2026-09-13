@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { TrySnapInfoButton } from "@/components/blog/try-snapinfo";
+import { ArticleTopCTA, ArticleBottomCTA } from "@/components/blog/article-cta";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
 import { ArticleBreadcrumb, createBreadcrumbSchema } from "@/components/blog/article-navigation";
 
@@ -113,6 +113,8 @@ function ArticlePage() {
         </p>
       </header>
 
+      <ArticleTopCTA />
+
       <section className="prose-content">
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           What Is AI Object Identification?
@@ -156,9 +158,13 @@ function ArticlePage() {
           Step 2: Let AI analyze the image
         </h3>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Once your photo is ready, open SnapInfo AI and upload or capture the image. The AI image
-          analyzer processes the picture in seconds, looking at visual features and matching them to
-          patterns it learned from millions of training images.
+          Once your photo is ready, open SnapInfo's{" "}
+          <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
+            free AI image analyzer
+          </a>{" "}
+          and upload or capture the image. The AI image analyzer processes the picture in seconds,
+          looking at visual features and matching them to patterns it learned from millions of
+          training images.
         </p>
         <p className="text-foreground/85 leading-relaxed mb-4">
           You do not need to type anything or choose from a list. The AI object identification
@@ -174,17 +180,6 @@ function ArticlePage() {
           details, and even note anything you should be cautious about. If the first result does
           not feel right, try a clearer photo from a different angle.
         </p>
-
-        <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
-          <h2 className="text-xl font-semibold text-foreground mb-3">
-            Try SnapInfo AI Image Analyzer for free
-          </h2>
-          <p className="text-foreground/80 leading-relaxed mb-5">
-            Upload a picture or take a photo and let AI analyze it. SnapInfo is fast, mobile-friendly,
-            and free to use.
-          </p>
-          <TrySnapInfoButton />
-        </section>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           What Types of Objects Can AI Identify?
@@ -290,17 +285,7 @@ function ArticlePage() {
         </p>
       </section>
 
-      <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
-        <h2 className="text-xl font-semibold text-foreground mb-3">
-          Try SnapInfo AI Image Analyzer for free — upload a picture or take a photo and let AI
-          analyze it.
-        </h2>
-        <p className="text-foreground/80 leading-relaxed mb-5">
-          SnapInfo makes it easy to identify objects from images, understand photos, and share your
-          results. No app install required.
-        </p>
-        <TrySnapInfoButton />
-      </section>
+      <ArticleBottomCTA />
 
       <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm">
         <h2 className="text-2xl font-bold mb-5 text-foreground">Related articles</h2>
