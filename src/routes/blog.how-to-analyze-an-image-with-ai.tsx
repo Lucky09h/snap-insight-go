@@ -109,6 +109,8 @@ function ArticlePage() {
         </p>
       </header>
 
+      <ArticleTopCTA />
+
       <section className="prose-content">
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           Step 1: Choose a clear photo
@@ -123,10 +125,13 @@ function ArticlePage() {
           Step 2: Upload or take the photo
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Open SnapInfo AI and choose whether to use your camera or upload an existing image from
-          your gallery. The camera option is great for identifying things in real time, like plants,
-          products, or landmarks. The upload option works for screenshots, saved photos, or images
-          someone sent you.
+          Open{" "}
+          <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
+            SnapInfo's free AI image analyzer
+          </a>{" "}
+          and choose whether to use your camera or upload an existing image from your gallery. The
+          camera option is great for identifying things in real time, like plants, products, or
+          landmarks. The upload option works for screenshots, saved photos, or images someone sent you.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
@@ -166,13 +171,7 @@ function ArticlePage() {
         </ul>
       </section>
 
-      <section className="mt-10 rounded-2xl bg-card border border-border p-6 shadow-sm text-center">
-        <h2 className="text-xl font-semibold text-foreground mb-3">Ready to analyze your first image?</h2>
-        <p className="text-foreground/80 leading-relaxed mb-5">
-          Open SnapInfo AI, upload or snap a photo, and see what the AI finds.
-        </p>
-        <TrySnapInfoButton />
-      </section>
+      <ArticleBottomCTA />
 
       <FAQSection items={faq} />
       <RelatedArticles
