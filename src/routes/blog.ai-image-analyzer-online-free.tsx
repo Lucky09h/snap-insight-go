@@ -161,7 +161,6 @@ function ArticlePage() {
           text in the frame — and generates a description in natural language. If you want a deeper
           definition, our guide explains{" "}
           <a
-            to="/blog/what-is-an-ai-image-analyzer"
             href="/blog/what-is-an-ai-image-analyzer"
             className="text-primary hover:underline"
           >
