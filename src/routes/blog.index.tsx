@@ -45,6 +45,12 @@ export const Route = createFileRoute("/blog/")({
 
 const posts = [
   {
+    slug: "/blog/ai-image-analyzer-online-free",
+    title: "AI Image Analyzer Online Free: Analyze Any Photo With AI",
+    summary:
+      "Learn what an online AI image analyzer is, what you can analyze with AI, and how to use SnapInfo as a free AI image analyzer in your browser.",
+  },
+  {
     slug: "/blog/how-to-identify-an-object-from-a-picture-using-ai",
     title: "How to Identify an Object From a Picture Using AI",
     summary:
