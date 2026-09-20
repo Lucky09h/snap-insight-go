@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleTopCTA, ArticleBottomCTA } from "@/components/blog/article-cta";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
 import {
@@ -9,7 +9,8 @@ import {
 
 const title = "What Is an AI Image Analyzer?";
 const description =
-  "An AI image analyzer identifies objects, text, and context in images. Learn how it works and how to try one for free.";
+  "Learn what an AI image analyzer is, how AI image analysis works, and what it can identify in your photos — then try SnapInfo's free AI image analyzer yourself.";
+const metaTitle = "What Is an AI Image Analyzer? How AI Image Analysis Works | SnapInfo AI";
 const url = "https://snap-insight-go.lovable.app/blog/what-is-an-ai-image-analyzer";
 
 const faq: FAQItem[] = [
@@ -32,6 +33,16 @@ const faq: FAQItem[] = [
     question: "Do I need to install an app to use one?",
     answer:
       "Not necessarily. SnapInfo AI runs in your web browser, so you can use it on mobile or desktop without installing anything.",
+  },
+  {
+    question: "How does AI image analysis work?",
+    answer:
+      "An AI model breaks the image into visual patterns — shapes, colors, textures, and context — compares them with patterns learned from millions of training images, and generates a description of what it sees.",
+  },
+  {
+    question: "Can I analyze an image online for free?",
+    answer:
+      "Yes. SnapInfo AI runs in your browser, so you can upload a photo or take a picture and analyze it with AI at no cost.",
   },
 ];
 
@@ -62,9 +73,9 @@ export const Route = createFileRoute("/blog/what-is-an-ai-image-analyzer")({
   component: ArticlePage,
   head: () => ({
     meta: [
-      { title: `${title} (And How It Works) | SnapInfo AI` },
+      { title: metaTitle },
       { name: "description", content: description },
-      { property: "og:title", content: `${title} (And How It Works) | SnapInfo AI` },
+      { property: "og:title", content: metaTitle },
       { property: "og:description", content: description },
       { property: "og:url", content: url },
       { property: "og:type", content: "article" },
@@ -74,7 +85,7 @@ export const Route = createFileRoute("/blog/what-is-an-ai-image-analyzer")({
           "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9377cf31-c602-4be3-a674-81143d142fe1/id-preview-a45ace0e--7171be51-f56b-4c7c-b6ee-2ba5b2228b32.lovable.app-1778180244331.png",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: `${title} (And How It Works) | SnapInfo AI` },
+      { name: "twitter:title", content: metaTitle },
       {
         name: "twitter:image",
         content:
