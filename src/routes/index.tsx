@@ -219,13 +219,13 @@ function Index() {
             At its core, AI image analysis is trained on large collections of labeled photos. A neural network learns relationships between shapes, colors, textures, and the words people use to describe them. When you analyze an image with AI, the model compares the patterns in your photo to what it has learned and predicts the most likely labels. The result is a plain-language summary that usually includes a name, a short description, and useful context.
           </p>
           <p className="text-foreground/80 leading-relaxed mb-4">
-            What can you learn from an AI picture analysis? In many cases, the tool can name the main subject, describe visible details, suggest possible uses, and flag related concepts. For example, a photo of a houseplant may return the species name, care hints, and a note that it prefers indirect light. A picture of a packaged snack might identify the product, list visible ingredients, and suggest common occasions when people eat it. Results vary depending on image quality, lighting, and how common the subject is in the model's training data.
+            What can you learn from an AI picture analysis? SnapInfo focuses on the main subject of your photo and returns its likely name, a short description, and a few common uses. For example, a photo of a houseplant may return a possible plant name and a brief description, while a picture of a kitchen gadget can suggest what it is and what it is typically used for. Results vary depending on image quality, lighting, and how common the subject is.
           </p>
           <p className="text-foreground/80 leading-relaxed mb-4">
             SnapInfo is designed to make this process fast and accessible. You do not need to install an app or create an account. Open the website, choose Take a photo to capture something in front of you, or tap Upload image to select a file from your device. The AI photo analyzer processes the image and returns a structured result you can read, copy, or share.
           </p>
           <p className="text-foreground/80 leading-relaxed mb-4">
-            People use AI image analyzers for many everyday tasks. Shoppers snap products in stores to compare prices online. Travelers photograph landmarks or street signs to learn names and translations. Students and hobbyists use image analysis AI to identify plants, animals, art, and historical objects. Homeowners photograph tools, parts, or appliances when they need replacements. The technology is also helpful for accessibility, providing descriptions of images for people with visual impairments.
+            People use AI image analyzers for many everyday tasks. Shoppers check what an unfamiliar product is. Students and hobbyists use image analysis AI to explore plants, animals, and everyday objects. Homeowners photograph tools, parts, or appliances to learn what they are called and what they are used for.
           </p>
           <p className="text-foreground/80 leading-relaxed mb-4">
             Unlike a reverse image search, which finds visually similar pictures already on the web, an AI image analyzer understands the content of your specific photo and creates a fresh description. That means you can ask, in effect, “What is this?” and get an answer even if your exact image has never been uploaded before. This makes AI photo analysis especially useful for one-of-a-kind moments: a bird in your garden, a dish at a restaurant, or a gadget you have never seen.
@@ -291,37 +291,25 @@ function Index() {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">Plants</h3>
               <p className="text-foreground/80 leading-relaxed">
-                A leaf, flower, or whole plant can often be matched to a species, with care tips or habitat notes.
+                A clear photo of a leaf, flower, or whole plant may help AI suggest a possible plant name and short description.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">Animals</h3>
               <p className="text-foreground/80 leading-relaxed">
-                Pets, wildlife, and insects can be identified by shape, markings, and posture.
+                Common pets, birds, and insects may be identified from a clear, well-lit photo.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">Food</h3>
               <p className="text-foreground/80 leading-relaxed">
-                Dishes, ingredients, and packaged goods may be recognized, with serving ideas or nutritional context when visible.
+                Dishes, fruits, vegetables, and snacks may be recognized, with a short description and common uses.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-1">Everyday items</h3>
               <p className="text-foreground/80 leading-relaxed">
                 Tools, appliances, toys, and household objects are common subjects that image analyzer AI handles well.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-foreground mb-1">Visible text and details</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                Signs, labels, menus, and documents can be read when the text is clear, giving you translations or summaries.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-foreground mb-1">Places and scenes</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                Landmarks, interiors, landscapes, and city streets can be described, helping you remember or research locations.
               </p>
             </div>
           </div>
