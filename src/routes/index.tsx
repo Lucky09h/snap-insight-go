@@ -381,6 +381,32 @@ function Index() {
           </a>
         </section>
 
+        <section className="rounded-2xl bg-card border border-border p-6 shadow-sm">
+          <h2 className="text-2xl font-bold mb-3 text-foreground">AI Image Analysis Guide</h2>
+          <p className="text-foreground/80 leading-relaxed mb-4">
+            New to AI image analysis? These short guides explain how it works and how to get better results.
+          </p>
+          <ul className="space-y-2 text-foreground/85">
+            <li>
+              <a href="/blog/what-is-an-ai-image-analyzer" className="text-primary hover:underline font-medium">
+                What is AI image analysis and how do AI image analyzers work?
+              </a>
+            </li>
+            <li>
+              <a href="/blog/how-to-analyze-an-image-with-ai" className="text-primary hover:underline">
+                Step-by-step: how to analyze an image with AI
+              </a>
+            </li>
+            <li>
+              <a href="/blog/how-to-identify-an-object-from-a-picture-using-ai" className="text-primary hover:underline">
+                How to identify an object from a picture
+              </a>
+            </li>
+          </ul>
+        </section>
+
+
+
         <FAQSection
           items={[
             {
