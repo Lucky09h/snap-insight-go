@@ -286,7 +286,12 @@ function ArticlePage() {
           <li><strong>Students</strong> exploring everyday objects and what they're used for.</li>
         </ul>
         <p className={p}>
-          No account is needed: SnapInfo works in your browser on phones and computers.
+          No account is needed: SnapInfo works in your browser on phones and computers. Learn more
+          about using a{" "}
+          <Link to="/blog/ai-image-analyzer-online-free" className={a}>
+            free AI image analyzer
+          </Link>{" "}
+          online.
         </p>
       </section>
 

@@ -390,6 +390,11 @@ function Index() {
                 How to identify an object from a picture
               </a>
             </li>
+            <li>
+              <a href="/blog/ai-image-analyzer-online-free" className="text-primary hover:underline">
+                AI Image Analyzer Online Free
+              </a>
+            </li>
           </ul>
         </section>
 
