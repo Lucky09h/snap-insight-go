@@ -132,6 +132,11 @@ function ArticlePage() {
           and choose whether to use your camera or upload an existing image from your gallery. The
           camera option is great for identifying things in real time, like plants, products, or
           landmarks. The upload option works for screenshots, saved photos, or images someone sent you.
+          For more on using an{" "}
+          <a href="/blog/ai-image-analyzer-online-free" className="text-primary hover:underline">
+            AI image analyzer online
+          </a>
+          , see our dedicated guide.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
