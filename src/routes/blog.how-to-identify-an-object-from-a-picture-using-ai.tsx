@@ -17,7 +17,7 @@ const faq: FAQItem[] = [
   {
     question: "What kinds of objects can AI identify from images?",
     answer:
-      "AI can recognize many everyday objects, including plants, animals, food, household items, tools, clothing, landmarks, vehicles, and visible text.",
+      "SnapInfo may suggest names for everyday objects, plants, animals, food, household items, tools, clothing, and vehicles. Results are predictions; OCR and dedicated landmark identification are not provided.",
   },
   {
     question: "How accurate is AI object identification?",
@@ -32,7 +32,7 @@ const faq: FAQItem[] = [
   {
     question: "Can AI identify multiple objects in one picture?",
     answer:
-      "Many AI image analyzers can detect and describe several objects in a single image, giving you a broader understanding of the scene.",
+      "SnapInfo asks the AI to identify the main subject and returns one name, description, and list of common uses. It does not provide a separate identification for every object. Analyze each subject in its own photo if you need individual results.",
   },
 ];
 
@@ -127,10 +127,10 @@ function ArticlePage() {
           understand the subject of your photo.
         </p>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          This technology powers many tools you already use, from photo organization apps to
-          accessibility features and shopping assistants. A general-purpose AI photo analyzer like
-          SnapInfo brings the same capability to your browser, so you can analyze a picture with AI
-          whenever you need to.
+          Different tools use image recognition for different tasks. SnapInfo has a narrower
+          purpose: it sends your photo to an AI service and asks for the main subject's name,
+          description, and common uses. It does not provide photo organization, spoken descriptions,
+          or shopping comparisons.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
@@ -175,10 +175,10 @@ function ArticlePage() {
           Step 3: Review the identification and details
         </h3>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          After the analysis, read the result carefully. A good AI image analyzer will give you more
-          than just a name. It may describe the object, suggest possible uses, point out important
-          details, and even note anything you should be cautious about. If the first result does
-          not feel right, try a clearer photo from a different angle.
+          After the analysis, review the likely name, short description, and common uses carefully.
+          SnapInfo does not provide a dedicated safety assessment or warnings field. If the
+          identification does not look right, try a clearer photo from another angle and confirm
+          important details with a trusted source.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
@@ -190,26 +190,22 @@ function ArticlePage() {
         </p>
         <ul className="list-disc pl-5 space-y-2 text-foreground/85 leading-relaxed mb-4">
           <li>
-            <strong>Plants and animals:</strong> Identify flowers, trees, birds, insects, and pets.
+            <strong>Plants and animals:</strong> Suggest possible names for flowers, trees, birds, insects, and pets.
           </li>
           <li>
-            <strong>Food and drinks:</strong> Recognize dishes, ingredients, packaged snacks, and
-            beverages.
+            <strong>Food and drinks:</strong> Suggest what a visible dish, ingredient, snack, or
+            beverage may be, without confirming ingredients or allergens.
           </li>
           <li>
             <strong>Household items:</strong> Name tools, appliances, gadgets, furniture, and decor.
           </li>
           <li>
-            <strong>Clothing and accessories:</strong> Describe styles, patterns, fabrics, and brands
-            when visible.
+            <strong>Clothing and accessories:</strong> Suggest the item type and describe visible
+            features, without verifying its brand, material, or authenticity.
           </li>
           <li>
-            <strong>Landmarks and vehicles:</strong> Detect famous places, monuments, cars, bikes, and
-            signs.
-          </li>
-          <li>
-            <strong>Visible text:</strong> Read labels, signs, packaging, and handwritten notes in
-            some cases.
+            <strong>Vehicles:</strong> Suggest a vehicle type from a clear photo, without
+            guaranteeing an exact model identification.
           </li>
         </ul>
 
@@ -252,12 +248,12 @@ function ArticlePage() {
         </p>
         <ul className="list-disc pl-5 space-y-2 text-foreground/85 leading-relaxed mb-4">
           <li>
-            <strong>Shopping:</strong> Snap a product in a store to compare prices, read reviews, or
-            find alternatives online.
+            <strong>Shopping:</strong> Use a suggested product name as a starting point for your own
+            research. SnapInfo does not fetch prices, reviews, or alternatives.
           </li>
           <li>
-            <strong>Travel:</strong> Identify landmarks, monuments, plants, and signs while exploring
-            new places.
+            <strong>Outdoors:</strong> Explore possible names for a plant, bird, or everyday object.
+            Do not use SnapInfo for landmark identification, sign translation, or safety decisions.
           </li>
           <li>
             <strong>Education:</strong> Learn about animals, rocks, art, or historical objects by
@@ -268,8 +264,8 @@ function ArticlePage() {
             need a replacement.
           </li>
           <li>
-            <strong>Accessibility:</strong> Get spoken or written descriptions of images for people
-            with visual impairments.
+            <strong>Learning:</strong> Read a short description and common uses of the main subject.
+            SnapInfo does not provide a dedicated spoken-description feature.
           </li>
           <li>
             <strong>Curiosity:</strong> Satisfy your curiosity about anything you see in daily life.

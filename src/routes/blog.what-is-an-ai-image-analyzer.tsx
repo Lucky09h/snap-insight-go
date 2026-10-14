@@ -172,8 +172,9 @@ function ArticlePage() {
           keeps things focused: it identifies the <strong>main object</strong> in your photo and
           returns three things — its likely <strong>name</strong>, a short{" "}
           <strong>description</strong>, and a few common <strong>uses</strong>. It is not designed
-          for reading documents, translating text, recognizing faces, or giving medical advice. For
-          a broader look at the kinds of information a model can extract, see{" "}
+          for reading documents, extracting or translating text, verifying documents, identifying
+          landmarks, recognizing faces, or giving medical advice. It does not provide a separate
+          identification for every object in a photo. For a closer look at its output, see{" "}
           <Link to="/blog/what-can-ai-image-analysis-tell-you-about-a-photo" className={a}>
             what AI image analysis can tell you about a photo
           </Link>

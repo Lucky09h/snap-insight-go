@@ -9,24 +9,24 @@ import {
 
 const title = "What Can AI Image Analysis Tell You About a Photo?";
 const description =
-  "Discover what AI image analysis can reveal about your photos, from objects and scenes to text, colors, and useful context.";
+  "Learn what SnapInfo's AI image analysis returns: a possible name for the main subject, a short description, common uses, and important limitations.";
 const url = "https://snap-insight-go.lovable.app/blog/what-can-ai-image-analysis-tell-you-about-a-photo";
 
 const faq: FAQItem[] = [
   {
     question: "Can AI tell me what breed my dog is from a photo?",
     answer:
-      "Often, yes. If the photo is clear and the dog is visible, an AI image analyzer can suggest a breed and describe key features.",
+      "SnapInfo may suggest a dog breed in its name or description, but this is an AI prediction, not a verified breed assessment. Confirm important details independently.",
   },
   {
     question: "Does AI image analysis read text inside pictures?",
     answer:
-      "Yes. Many analyzers use optical character recognition (OCR) to extract words from signs, labels, receipts, and documents.",
+      "SnapInfo does not provide a dedicated OCR, text-extraction, translation, or document-verification feature. Its result focuses on the main subject's name, description, and common uses.",
   },
   {
     question: "Is my photo stored after I upload it?",
     answer:
-      "SnapInfo AI processes your image to generate a result and does not keep your photos on file.",
+      "Your image is sent to an external AI service for analysis. End-to-end photo retention and deletion are not verified, so do not assume uploaded photos are never stored. Avoid uploading sensitive or confidential images.",
   },
   {
     question: "Do I need technical skills to use AI image analysis?",
@@ -116,51 +116,49 @@ function ArticlePage() {
       <section className="prose-content">
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">The main subject</h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          At its simplest, AI image analysis identifies what is in the center of the frame. It can
-          recognize objects, animals, plants, food, landmarks, and everyday items. For example, a
-          photo of a spotted dog may return "Dalmatian" along with a short description of its coat and
-          build. A picture of a leafy houseplant might come back as "Monstera deliciosa" with care
-          hints.
+          SnapInfo asks the AI to identify the main subject and return its likely name, a short
+          description, and common uses. Subjects may include everyday objects, animals, plants,
+          and food. A spotted dog might be described as a Dalmatian, or a leafy houseplant as a
+          Monstera, but these are predictions rather than confirmed identifications.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">The setting or scene</h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          AI does not just look at the subject; it also reads the background. It can tell whether a
-          photo was taken indoors or outdoors, in a kitchen, office, forest, or on a beach. A sunset
-          shoreline might be labeled "coastal scene at dusk," while a cluttered desk could be
-          described as "home office workspace." This context helps you organize photos or remember
-          where something happened.
+          Background details may influence the AI's suggested identification, but SnapInfo does
+          not provide a separate scene classification or a dedicated landmark-identification
+          feature. Keep the subject large and clear in the frame rather than expecting a full
+          account of everything happening in the picture.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">Text inside the image</h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Optical character recognition, or OCR, lets AI pull words out of a picture. That means a
-          photo of a restaurant menu, a street sign, a product label, or a receipt can be converted
-          into editable text. If you are traveling, you can use a{" "}
+          SnapInfo does not provide optical character recognition (OCR), editable text extraction,
+          sign translation, or document verification. Its{" "}
           <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
             free AI image analyzer
           </a>{" "}
-          like SnapInfo AI to snap a sign in another language and get the text extracted for
-          translation.
+          focuses on the main subject's name, description, and common uses. A model might mention
+          visible writing incidentally, but that is not a verified transcription or translation
+          feature. Use a dedicated tool when you need text read accurately.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           Colors, style, and composition
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Some analyzers go further and describe the visual style of an image. They might note
-          dominant colors, lighting conditions, or the overall mood. A designer could use this to
-          build a color palette from a nature photo, or a marketer could check whether a product
-          shot feels bright and friendly or dark and dramatic.
+          A short subject description may mention visible features such as color or shape.
+          SnapInfo does not return a separate color palette, mood assessment, or composition
+          analysis. Do not interpret incidental details as a complete visual-style report.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           Relationships and context
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Advanced AI can understand how objects relate to one another. A photo showing flour, eggs,
-          a whisk, and a mixing bowl is not just a list of kitchen items; the AI can infer that
-          someone is baking. This kind of context makes the results more useful than a simple label.
+          SnapInfo requests one main-subject result, not an inventory of every object or an
+          analysis of their relationships. A photo containing flour, eggs, a whisk, and a bowl may
+          lead it to choose only one item. For separate identifications, take a clear photo of each
+          subject and analyze the photos individually.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">

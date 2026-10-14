@@ -16,12 +16,12 @@ const faq: FAQItem[] = [
   {
     question: "What is an AI image analyzer?",
     answer:
-      "An AI image analyzer is a tool that uses artificial intelligence to examine a photo and describe what it contains — objects, plants, animals, food, text, scenes, and other visible details — in plain language.",
+      "An AI image analyzer uses artificial intelligence to interpret a photo. SnapInfo focuses on the main subject and returns a likely name, short description, and common uses; it does not provide OCR, translation, or a complete scene report.",
   },
   {
     question: "Is there a free AI image analyzer online?",
     answer:
-      "Yes. SnapInfo is a free AI image analyzer that runs entirely in your browser. You can upload an image or take a photo and get an AI-powered analysis without installing anything.",
+      "Yes. SnapInfo is free to use through your browser without installing anything. You can upload or capture a photo, which is sent to an external AI service for analysis rather than processed entirely on your device.",
   },
   {
     question: "Can AI analyze a photo?",
@@ -36,7 +36,7 @@ const faq: FAQItem[] = [
   {
     question: "Can AI identify plants and animals from photos?",
     answer:
-      "Yes. Identifying common plants and animals is one of the most popular uses of AI image analysis. Clear, close-up photos of the subject give the most reliable results.",
+      "SnapInfo may suggest a plant or animal name from a clear photo. Identifications are AI predictions, so confirm important details with a reliable source and never use them to decide whether a plant or food is safe to eat.",
   },
   {
     question: "What is the difference between an AI image analyzer and reverse image search?",
@@ -136,7 +136,7 @@ function ArticlePage() {
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
           An online AI image analyzer lets you point your camera at almost anything — a plant, a
-          product, a dish, a street sign, or a random object you can't name — and get a plain-language
+          product, a dish, or an everyday object you can't name — and get a plain-language
           explanation of what you're looking at. People use these tools to identify things quickly,
           learn about the world around them, make smarter shopping decisions, and understand photos
           they receive from others. In this guide, you'll learn how AI image analysis works, what you
@@ -158,7 +158,7 @@ function ArticlePage() {
           An AI image analyzer is a tool that uses artificial intelligence to look at a picture and
           tell you what it contains. Instead of just matching your image against pictures that already
           exist online, it actually examines the visual content — the shapes, colors, textures, and
-          text in the frame — and generates a description in natural language. If you want a deeper
+          visible features of the main subject — and generates a description in natural language. If you want a deeper
           definition, our guide explains{" "}
           <a
             href="/blog/what-is-an-ai-image-analyzer"
@@ -179,21 +179,20 @@ function ArticlePage() {
           How Does an AI Image Analyzer Work?
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Under the hood, most AI image analyzers follow the same basic process:
+          SnapInfo's image-analysis process works as follows:
         </p>
         <ol className="list-decimal pl-5 space-y-2 text-foreground/85 leading-relaxed mb-4">
           <li>You upload an image or take a photo with your camera.</li>
           <li>
-            The AI examines the visual information in the image — edges, colors, patterns, and
-            shapes — using a model trained on millions of labeled examples.
+            SnapInfo sends the image to an external AI service with a request to identify the
+            main object.
           </li>
           <li>
-            It identifies what it sees: objects, scenes, visible text, and other details that help
-            make sense of the picture.
+            The AI is asked to suggest the main subject's name, a short description, and common
+            uses, not to list every object or transcribe text.
           </li>
           <li>
-            The tool generates a natural-language analysis describing the subject, its likely
-            identity, and any useful details or context.
+            SnapInfo displays those three fields for you to review, copy, or share.
           </li>
         </ol>
         <p className="text-foreground/85 leading-relaxed mb-4">
@@ -215,8 +214,8 @@ function ArticlePage() {
             found and can't identify.
           </li>
           <li>
-            <strong>Plants:</strong> A houseplant, garden flower, or tree you'd like to learn more
-            about, including basic care hints.
+            <strong>Plants:</strong> A possible name and short description of a houseplant, garden
+            flower, or tree, rather than a dedicated care plan.
           </li>
           <li>
             <strong>Animals:</strong> A bird at your feeder, an insect in the garden, or a breed you
@@ -227,20 +226,8 @@ function ArticlePage() {
             in a photo someone sent you.
           </li>
           <li>
-            <strong>Products:</strong> An item in a shop, its likely purpose, and things to check
-            before buying something similar.
-          </li>
-          <li>
-            <strong>Documents and visible text:</strong> Labels, packaging, screenshots, or pages
-            where you want the visible text explained or summarized.
-          </li>
-          <li>
-            <strong>Signs:</strong> Road signs, warning notices, or foreign-language signage while
-            traveling.
-          </li>
-          <li>
-            <strong>Everyday scenes:</strong> A room, a street, or a landscape where you want to
-            understand what's going on or what stands out.
+            <strong>Products:</strong> A possible item name, short description, and common uses,
+            without price comparisons or authenticity checks.
           </li>
         </ul>
 
@@ -279,9 +266,11 @@ function ArticlePage() {
         <p className="text-foreground/85 leading-relaxed mb-4">
           SnapInfo is a free AI image analyzer that runs in your browser — there's nothing to install
           and no account needed. You can either take a photo with your camera or upload an existing
-          image, and SnapInfo's AI will analyze it and return a clear description of what it sees,
-          including the likely identity of the subject, important details, practical uses, and any
-          warnings or considerations worth knowing. You can then copy the complete result to your
+          image, which is sent to an external AI service. SnapInfo returns the main subject's likely
+          name, a short description, and common uses. It does not provide OCR, translation, document
+          verification, dedicated landmark recognition, a separate result for every object, or a
+          safety assessment. End-to-end photo retention and deletion are not verified; avoid
+          sensitive or confidential images. You can then copy the complete result to your
           clipboard or share it directly from your device.
         </p>
         <MidCTA />
@@ -337,8 +326,8 @@ function ArticlePage() {
         <p className="text-foreground/85 leading-relaxed mb-4">
           No — and it's worth knowing why. AI image analyzers generate predictions, not certainties.
           Results depend heavily on the quality of your image, how visible the subject is, and how
-          complex or unusual it is. A clear photo of a common apple will almost always be identified
-          correctly; a dim, blurry photo of a rare beetle may be misidentified or described only in
+          complex or unusual it is. A clear photo of a common apple may be easier to identify than
+          a dim, blurry photo of a rare beetle, which may be misidentified or described only in
           general terms.
         </p>
         <p className="text-foreground/85 leading-relaxed mb-4">
