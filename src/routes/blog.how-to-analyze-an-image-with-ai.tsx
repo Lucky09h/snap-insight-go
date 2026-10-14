@@ -31,7 +31,7 @@ const faq: FAQItem[] = [
   {
     question: "Can I analyze a screenshot?",
     answer:
-      "Yes. Screenshots are just images, so you can upload them the same way you would upload a photo.",
+      "You can upload an image screenshot to identify its main visible subject. SnapInfo does not provide text extraction, translation, or document verification.",
   },
 ];
 
@@ -130,8 +130,9 @@ function ArticlePage() {
             SnapInfo's free AI image analyzer
           </a>{" "}
           and choose whether to use your camera or upload an existing image from your gallery. The
-          camera option is great for identifying things in real time, like plants, products, or
-          landmarks. The upload option works for screenshots, saved photos, or images someone sent you.
+          camera option lets you capture a still photo of a plant, product, or everyday object for
+          a possible identification. Uploaded images follow the same analysis process, focused on
+          one main subject rather than every object or any text in the picture.
           For more on using an{" "}
           <a href="/blog/ai-image-analyzer-online-free" className="text-primary hover:underline">
             AI image analyzer online
@@ -143,27 +144,28 @@ function ArticlePage() {
           Step 3: Let the AI process the image
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Once the image is loaded, the AI model examines shapes, colors, textures, and context. This
-          usually takes only a few seconds. During that time, the tool is comparing what it sees
-          against patterns it learned from millions of training images.
+          Once the image is loaded, SnapInfo sends it to an AI service with a request to identify
+          the main object. The service is asked to return a name, a short description, and common
+          uses. Processing time varies with the service, your connection, and the image.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           Step 4: Read the results
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          The output typically includes a name for the subject, a short description, and a list of
-          uses or benefits. For example, if you upload a photo of a houseplant, you might see the
-          plant name, a brief care summary, and tips about sunlight and watering.
+          The output contains the main subject's likely name, a short description, and common uses.
+          A houseplant photo may return a possible plant name and description, but the tool does
+          not provide a dedicated plant-care plan. Check important identifications independently.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">
           Step 5: Use the insights
         </h2>
         <p className="text-foreground/85 leading-relaxed mb-4">
-          Now that you have information, you can act on it. You might research a product you saw in a
-          store, learn the name of a bird in your garden, translate a sign while traveling, or verify
-          a document. The value comes from turning a static image into actionable knowledge.
+          Use the suggested name and description as a starting point for researching a product,
+          bird, plant, or household tool. SnapInfo does not provide OCR, sign translation, document
+          verification, or a dedicated landmark-identification feature. Do not use its results as
+          professional medical, legal, safety, or food-allergy advice.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">Tips for better results</h2>
