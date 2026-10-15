@@ -138,8 +138,7 @@ function ArticlePage() {
           An online AI image analyzer lets you point your camera at almost anything — a plant, a
           product, a dish, or an everyday object you can't name — and get a plain-language
           explanation of what you're looking at. People use these tools to identify things quickly,
-          learn about the world around them, make smarter shopping decisions, and understand photos
-          they receive from others. In this guide, you'll learn how AI image analysis works, what you
+          learn about everyday things, and get a starting point for their own research. In this guide, you'll learn how AI image analysis works, what you
           can analyze, and how to use a free AI image analyzer like{" "}
           <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
             SnapInfo

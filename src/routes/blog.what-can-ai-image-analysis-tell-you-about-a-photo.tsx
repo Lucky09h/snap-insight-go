@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArticleTopCTA, ArticleBottomCTA } from "@/components/blog/article-cta";
 import { FAQSection, type FAQItem } from "@/components/blog/faq-section";
 import {
@@ -168,7 +168,12 @@ function ArticlePage() {
           AI is powerful, but it has limits. It depends on image quality, lighting, and the data it
           was trained on. A blurry, dark, or heavily cropped photo may produce vague or incorrect
           results. It can also struggle with rare objects or ambiguous scenes, so it is best used as
-          a helpful assistant rather than an absolute authority.
+          a helpful assistant rather than an absolute authority. To learn how analyzers produce
+          these predictions, read{" "}
+          <Link to="/blog/what-is-an-ai-image-analyzer" className="text-primary hover:underline">
+            how AI image analyzers work
+          </Link>
+          .
         </p>
       </section>
 
