@@ -60,7 +60,7 @@ const posts = [
     slug: "/blog/what-can-ai-image-analysis-tell-you-about-a-photo",
     title: "What Can AI Image Analysis Tell You About a Photo?",
     summary:
-      "Discover the kinds of information AI can extract from a single image, from objects and scenes to text, colors, and context.",
+      "See what SnapInfo returns from a photo: the likely name of the main subject, a short description, and common uses — plus where its results fall short.",
   },
   {
     slug: "/blog/how-to-analyze-an-image-with-ai",
