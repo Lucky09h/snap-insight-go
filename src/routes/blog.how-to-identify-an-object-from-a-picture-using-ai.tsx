@@ -320,10 +320,14 @@ function ArticlePage() {
         <p className="text-foreground/85 leading-relaxed mb-4">
           Learning how to identify an object from a picture using AI is one of the most practical ways
           to use image recognition AI in everyday life. With just a clear photo and a free tool like
-          SnapInfo AI, you can analyze a picture with AI, recognize objects, and get useful details in
-          seconds. Whether you are curious about a plant, shopping for a replacement part, or
-          exploring a new city, AI object identification can help you understand the world around you
-          one photo at a time.
+          SnapInfo AI, you can get a possible name, a short description, and common uses for the main
+          object in a photo. Whether you are curious about a plant or trying to name an unfamiliar
+          gadget, treat the result as a helpful starting point and confirm important details
+          yourself. For a walkthrough of the free tool itself, see our{" "}
+          <Link to="/blog/ai-image-analyzer-online-free" className="text-primary hover:underline">
+            guide to using SnapInfo online
+          </Link>
+          .
         </p>
         <p className="text-foreground/85 leading-relaxed">
           Remember that AI-generated results are not always perfect. Use them as a helpful starting
