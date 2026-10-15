@@ -72,7 +72,7 @@ const posts = [
     slug: "/blog/what-is-an-ai-image-analyzer",
     title: "What Is an AI Image Analyzer?",
     summary:
-      "Learn what an AI image analyzer is, how it works, and how it can help with everyday tasks like shopping, travel, and learning.",
+      "Learn what an AI image analyzer is, how it reads a photo, and what it returns: the likely name of the main subject, a short description, and common uses.",
   },
 ];
 
