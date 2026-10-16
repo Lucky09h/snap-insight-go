@@ -6,6 +6,6 @@
 - [x] Correct leftover claims in three articles (city exploration, shopping decisions, two internal links).
 - [x] Rewrite the blog listing summary for "What Is an AI Image Analyzer?" to verified capabilities only.
 - [x] Rewrite the blog listing summary for "What Can AI Image Analysis Tell You About a Photo?" to verified capabilities only.
-- [ ] Publish the pending preview changes once the user approves.
+- [x] Publish the pending changes and verify the live site (pages, summaries, corrections, tags, sitemap, robots, analyzer, Copy/Share).
 
-Publication was not requested; all corrections remain in preview. External service retention and exact deployed function-source equivalence remain unverified.
+Published 2026-10-15T20:18Z to https://snap-insight-go.lovable.app after a clean security scan. External AI service retention, logging, and deletion remain unverified, and deeper security scan results are stale for the newest version.
