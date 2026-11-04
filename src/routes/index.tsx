@@ -20,20 +20,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "AI Image Analyzer – Analyze Images With AI | SnapInfo" },
+      { title: "Free AI Image Analyzer Online – Analyze Photos With AI | SnapInfo" },
       {
         name: "description",
         content:
-          "Use SnapInfo as a free AI image analyzer to analyze photos and identify objects, plants, animals, food, and more with AI.",
+          "Use SnapInfo as a free AI image analyzer online — upload a photo or take a picture and get the likely object name, a short description, and common uses.",
       },
       {
         property: "og:title",
-        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
+        content: "Free AI Image Analyzer Online – Analyze Photos With AI | SnapInfo",
       },
       {
         property: "og:description",
         content:
-          "Use SnapInfo as a free AI image analyzer to analyze photos and identify objects, plants, animals, food, and more with AI.",
+          "Use SnapInfo as a free AI image analyzer online — upload a photo or take a picture and get the likely object name, a short description, and common uses.",
       },
       { property: "og:url", content: "https://snap-insight-go.lovable.app/" },
       { property: "og:type", content: "website" },
@@ -46,12 +46,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:site", content: "@Lovable" },
       {
         name: "twitter:title",
-        content: "AI Image Analyzer – Analyze Images With AI | SnapInfo",
+        content: "Free AI Image Analyzer Online – Analyze Photos With AI | SnapInfo",
       },
       {
         name: "twitter:description",
         content:
-          "Use SnapInfo as a free AI image analyzer to analyze photos and identify objects, plants, animals, food, and more with AI.",
+          "Use SnapInfo as a free AI image analyzer online — upload a photo or take a picture and get the likely object name, a short description, and common uses.",
       },
       {
         name: "twitter:image",
