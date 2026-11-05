@@ -13,7 +13,6 @@ import {
   Utensils,
   PackageSearch,
 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { FAQSection } from "@/components/blog/faq-section";
 
 export const Route = createFileRoute("/")({
@@ -116,6 +115,7 @@ function Index() {
       setStatus("loading");
       setError(null);
 
+      const { supabase } = await import("@/integrations/supabase/client");
       const { data, error: fnError } = await supabase.functions.invoke("analyze-image", {
         body: { imageBase64: dataUrl },
       });
