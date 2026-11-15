@@ -9,7 +9,7 @@ import {
 
 const title = "How to Analyze an Image With AI";
 const description =
-  "Learn how to analyze an image with AI in seconds. Follow our simple guide to upload or snap a photo and get instant, useful insights.";
+  "Follow the steps to analyze a photo with AI: choose or capture an image, review the main subject's likely name, description, and common uses, then copy or share the result.";
 const url = "https://snap-insight-go.lovable.app/blog/how-to-analyze-an-image-with-ai";
 
 const faq: FAQItem[] = [
@@ -44,7 +44,7 @@ const articleSchema = {
   publisher: { "@type": "Organization", name: "SnapInfo AI" },
   mainEntityOfPage: { "@type": "WebPage", "@id": url },
   datePublished: "2026-08-28",
-  dateModified: "2026-08-28",
+  dateModified: "2026-11-14",
 };
 const breadcrumbSchema = createBreadcrumbSchema(title, url);
 
@@ -166,6 +166,8 @@ function ArticlePage() {
           bird, plant, or household tool. SnapInfo does not provide OCR, sign translation, document
           verification, or a dedicated landmark-identification feature. Do not use its results as
           professional medical, legal, safety, or food-allergy advice.
+          On the results screen, use Copy Result to copy the result or Share Result to open your
+          device's sharing options.
         </p>
 
         <h2 className="text-2xl font-semibold text-foreground mt-10 mb-3">Tips for better results</h2>
