@@ -9,8 +9,9 @@ import {
 
 const title = "What Can AI Image Analysis Tell You About a Photo?";
 const description =
-  "Learn what SnapInfo's AI image analysis returns: a possible name for the main subject, a short description, common uses, and important limitations.";
+  "See what AI image analysis can tell you about a photo: SnapInfo suggests the main subject's likely name, a short description, and common uses.";
 const url = "https://snap-insight-go.lovable.app/blog/what-can-ai-image-analysis-tell-you-about-a-photo";
+const metaTitle = "What Can AI Image Analysis Tell You About a Photo? | SnapInfo";
 
 const faq: FAQItem[] = [
   {
@@ -44,7 +45,7 @@ const articleSchema = {
   publisher: { "@type": "Organization", name: "SnapInfo AI" },
   mainEntityOfPage: { "@type": "WebPage", "@id": url },
   datePublished: "2026-08-28",
-  dateModified: "2026-08-28",
+  dateModified: "2026-11-14",
 };
 const breadcrumbSchema = createBreadcrumbSchema(title, url);
 
@@ -64,9 +65,9 @@ export const Route = createFileRoute(
   component: ArticlePage,
   head: () => ({
     meta: [
-      { title: `${title} | SnapInfo AI` },
+      { title: metaTitle },
       { name: "description", content: description },
-      { property: "og:title", content: `${title} | SnapInfo AI` },
+      { property: "og:title", content: metaTitle },
       { property: "og:description", content: description },
       { property: "og:url", content: url },
       { property: "og:type", content: "article" },
@@ -76,7 +77,7 @@ export const Route = createFileRoute(
           "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9377cf31-c602-4be3-a674-81143d142fe1/id-preview-a45ace0e--7171be51-f56b-4c7c-b6ee-2ba5b2228b32.lovable.app-1778180244331.png",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: `${title} | SnapInfo AI` },
+      { name: "twitter:title", content: metaTitle },
       {
         name: "twitter:image",
         content:
@@ -102,8 +103,9 @@ function ArticlePage() {
           {title}
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          A single photo can hold a surprising amount of information. AI image analysis reads the
-          visual details and turns them into clear, useful answers. Here is what a capable tool like{" "}
+          AI image analysis can offer a starting point for understanding a photo, but its output
+          depends on the tool. SnapInfo focuses on one likely main subject and returns its name, a
+          short description, and common uses—not a complete account of everything in the image. Here is what{" "}
           <a href="https://snap-insight-go.lovable.app/" className="text-primary hover:underline">
             SnapInfo AI
           </a>{" "}

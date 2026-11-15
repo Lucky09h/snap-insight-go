@@ -7,13 +7,13 @@ import {
   createBreadcrumbSchema,
 } from "@/components/blog/article-navigation";
 
-const title = "What Is AI Image Analysis? How AI Image Analyzers Work";
+const title = "What Is an AI Image Analyzer? How It Works";
 const description =
-  "Learn what AI image analysis is, how an AI image analyzer reads a photo, what results it gives, and its limits. Try SnapInfo's free AI image analyzer.";
-const metaTitle = "What Is AI Image Analysis? How AI Image Analyzers Work | SnapInfo";
+  "Learn what an AI image analyzer does, how photo analysis works, and what SnapInfo returns: a likely main-subject name, a short description, and common uses.";
+const metaTitle = "What Is an AI Image Analyzer? How It Works | SnapInfo";
 const url = "https://snap-insight-go.lovable.app/blog/what-is-an-ai-image-analyzer";
 const datePublished = "2026-08-28";
-const dateModified = "2026-10-01";
+const dateModified = "2026-11-14";
 
 const faq: FAQItem[] = [
   {
@@ -125,14 +125,12 @@ function ArticlePage() {
         <p className="text-sm text-muted-foreground mb-4">
           By the SnapInfo AI team · Published{" "}
           <time dateTime={datePublished}>August 28, 2026</time> · Updated{" "}
-          <time dateTime={dateModified}>October 1, 2026</time>
+          <time dateTime={dateModified}>November 14, 2026</time>
         </p>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          An AI image analyzer is a tool that looks at a picture and tells you what is in it. Instead
-          of relying on captions or filenames, it uses artificial intelligence to interpret the
-          visual content itself. This guide explains what AI image analysis is, how it works, what a
-          result looks like, and where its limits are — so you know when to trust it and when to
-          double-check.
+          An AI image analyzer uses an AI model to suggest what the main subject in a photo may be.
+          This guide explains what image analysis means, what SnapInfo returns from a photo, and how
+          to treat the result as a prediction rather than a guaranteed identification.
         </p>
       </header>
 
@@ -155,7 +153,7 @@ function ArticlePage() {
           subject probably is, a short explanation, and useful context.
         </p>
 
-        <h2 className={h2}>What Can an AI Image Analyzer Tell You About a Photo?</h2>
+        <h2 className={h2}>What Does SnapInfo Return?</h2>
         <p className={p}>
           General-purpose AI image analyzers can describe many kinds of everyday subjects. Typical
           examples include:
@@ -169,7 +167,7 @@ function ArticlePage() {
         </ul>
         <p className={p}>
           <a href="https://snap-insight-go.lovable.app/" className={a}>SnapInfo's free AI image analyzer</a>{" "}
-          keeps things focused: it identifies the <strong>main object</strong> in your photo and
+          keeps things focused: it asks the AI to identify the <strong>main subject</strong> in your photo and
           returns three things — its likely <strong>name</strong>, a short{" "}
           <strong>description</strong>, and a few common <strong>uses</strong>. It is not designed
           for reading documents, extracting or translating text, verifying documents, identifying
@@ -183,30 +181,17 @@ function ArticlePage() {
 
         <h2 className={h2}>How AI Image Analysis Works</h2>
         <p className={p}>
-          Under the hood, image analysis AI relies on neural networks trained on very large
-          collections of labeled images. When you analyze an image with AI, the process roughly
-          looks like this:
+          In SnapInfo, the photo is sent to an external AI service with a request to identify the
+          main subject. The service is asked to return three fields:
         </p>
         <ol className="list-decimal pl-5 space-y-2 text-foreground/85 leading-relaxed mb-4">
-          <li><strong>Input:</strong> you upload a photo or take a picture with your camera.</li>
-          <li>
-            <strong>Pattern detection:</strong> the model picks out edges, shapes, colors, textures,
-            and how parts of the image relate to each other.
-          </li>
-          <li>
-            <strong>Context:</strong> it considers the scene as a whole — a green, leafy shape reads
-            differently in a kitchen than in a forest.
-          </li>
-          <li>
-            <strong>Prediction:</strong> it compares these signals with what it learned during
-            training and picks the most likely subject.
-          </li>
-          <li>
-            <strong>Explanation:</strong> a language model turns that prediction into plain words.
-          </li>
+          <li><strong>Name:</strong> the likely name of the main subject.</li>
+          <li><strong>Description:</strong> a short explanation of the subject.</li>
+          <li><strong>Common uses:</strong> several typical uses suggested by the AI.</li>
         </ol>
         <p className={p}>
-          The result is a prediction, not a certainty. For a hands-on walkthrough, read{" "}
+          These are AI-generated suggestions and can be incorrect, especially when a photo is blurry,
+          poorly lit, or shows an unusual subject. For a hands-on walkthrough, read{" "}
           <Link to="/blog/how-to-analyze-an-image-with-ai" className={a}>
             how to analyze an image with AI
           </Link>{" "}

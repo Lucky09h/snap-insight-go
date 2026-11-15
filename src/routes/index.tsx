@@ -381,6 +381,11 @@ function Index() {
               </a>
             </li>
             <li>
+              <a href="/blog/what-can-ai-image-analysis-tell-you-about-a-photo" className="text-primary hover:underline">
+                What AI image analysis can tell you about a photo
+              </a>
+            </li>
+            <li>
               <a href="/blog/how-to-analyze-an-image-with-ai" className="text-primary hover:underline">
                 Step-by-step: how to analyze an image with AI
               </a>
